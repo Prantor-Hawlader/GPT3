@@ -15,6 +15,7 @@
   font-size: 60px;
   background: linear-gradient(to bottom, rgb(44, 44, 248), rgb(106, 106, 241));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -26,14 +27,4 @@
 .desc {
   font-size: 24px;
   font-weight: 300;
-}
-.button {
-  border: none;
-  padding: 15px;
-  cursor: pointer;
-  width: max-content;
-  background: linear-gradient(to bottom, rgb(44, 44, 248), rgb(106, 106, 241));
-  border-radius: 3px;
-  color: whitesmoke;
-  font-size: large;
 }

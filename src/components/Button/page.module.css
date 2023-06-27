@@ -1,0 +1,10 @@
+.button {
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  width: max-content;
+  background: linear-gradient(to bottom, rgb(44, 44, 248), rgb(106, 106, 241));
+  border-radius: 3px;
+  color: whitesmoke;
+  font-size: large;
+}
