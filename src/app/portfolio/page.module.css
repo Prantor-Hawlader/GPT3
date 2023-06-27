@@ -1,2 +1,42 @@
 .container {
 }
+
+.selectTitle {
+  margin: 10px 0;
+}
+
+.items {
+  display: flex;
+  gap: 50px;
+}
+
+.item {
+  border: 5px solid #bbb;
+  border-radius: 5px;
+  height: 360px;
+  width: 300px;
+  position: relative;
+  background-size: cover !important;
+}
+
+.item:nth-child(1) {
+  background: url("/vintage.jpg");
+}
+.item:nth-child(2) {
+  background: url("/pc.jpg");
+}
+.item:nth-child(3) {
+  background: url("/application.jpg");
+}
+
+.title {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.item:hover .title {
+  color: rgb(106, 106, 241);
+}

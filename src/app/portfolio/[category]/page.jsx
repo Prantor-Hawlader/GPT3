@@ -1,8 +1,11 @@
 import React from 'react'
-
-const Category = () => {
+import styles from "./page.module.css"
+const Category = ({params}) => {
+  console.log(params)
   return (
-    <div>Category</div>
+    <div className={styles.container}>
+      <h1 className='catTitle'>{params.category}</h1>
+    </div>
   )
 }
 
