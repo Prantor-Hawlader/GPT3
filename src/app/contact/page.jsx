@@ -4,7 +4,13 @@ import support from "public/call-center.gif"
 import Image from 'next/image'
 import Button from '@/components/Button/Button'
 import Gradient from '@/components/Gradient/Gradient'
+
+export const metadata = {
+  title: "Prantorly Contact Info",
+  description: "This is contact page",
+};
 const Contact = () => {
+
   return (
     <div className={styles.container}>
 

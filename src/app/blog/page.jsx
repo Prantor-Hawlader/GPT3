@@ -6,7 +6,7 @@ import lgcode from "public/lgCode.jpg"
 import {notFound} from "next/navigation"
 
 async function getData() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts', { next: { revalidate: 10 } })
+  const res = await fetch('http://localhost:3000/api/posts', { next: { revalidate: 10 } })
 
   if (!res.ok) {
  return notFound();
@@ -23,14 +23,14 @@ async function getData() {
   return (
     <div className={styles.container}>
 {data.map((item) => (
-  <Link key={item.id} href="/blog/testId" className={styles.item}>
+  <Link key={item.id} href={`/blog/${item._id}`} className={styles.item}>
   <div className={styles.imgContainer}>
-  <Image src={lgcode} alt=''  className={styles.img} width={400} height={250} />
+  <Image src={item.img} alt=''  className={styles.img} width={400} height={250} />
   </div>
   
   <div className={styles.content}>
   <h1 className={styles.title}> {item.title} </h1>
-  <p className={styles.desc}>{item.body}</p>
+  <p className={styles.desc}>{item.desc}</p>
   </div>
   
   
