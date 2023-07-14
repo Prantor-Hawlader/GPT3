@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./page.module.css"
 import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 
 
 
@@ -24,13 +25,22 @@ const Dashboard = () => {
 //     }
 //   getData()
 //   },[])
-const session = useSession()
+const session = useSession();
+const route = useRouter();
   console.log(session)
 
+  if(session.status === "loading"){return <p>...Loading</p>} 
 
+if(session.status === "unauthenticated"){
+ route?.push("/dashboard/login")
+}
+if(session.status === "authenticated"){
   return (
     <div className={styles.container}>Dashboard</div>
   )
+}
+
+
 }
 
 export default Dashboard
